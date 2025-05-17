@@ -35,5 +35,4 @@ A web-based **Smart Attendance System** built using **JSP, Servlets, and MySQL**
 
 ---
 
-## 📁 Project Structure (Typical)
 
