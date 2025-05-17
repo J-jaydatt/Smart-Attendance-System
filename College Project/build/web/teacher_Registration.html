@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Registration</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-image: linear-gradient(to right, #9955ff, whitesmoke);
+            margin: 0;
+            padding: 0;
+        }
+        .formbody {
+            width: 30%;
+            margin: 5% auto;
+            padding: 20px;
+            background: whitesmoke;
+            border-radius: 8px;
+            border: 1px solid #5218fa;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #5218fa;
+        }
+        label {
+            display: block;
+            margin: 15px 0 5px 10px;
+            color: gray;
+        }
+        input, select {
+            width: calc(100% - 40px);
+            margin: 0 10px 20px 10px;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid silver;
+            background: transparent;
+            height: 40px;
+        }
+        button {
+            display: block;
+            width: calc(100% - 40px);
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #5218fa;
+            color: whitesmoke;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4a14e0;
+        }
+        #back {
+            margin: 20px;
+            width: 10%;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            document.getElementById("submitBtn").disabled = false; // Enable submit button after page loads
+        };
+
+        function indexpage() {
+            window.location.href = "admin_TeacherOperations.jsp";
+        }
+
+        function form_Validations() {
+            var name = document.getElementById("tName").value.trim();
+            var gender = document.getElementById("tGender").value;
+            var contact = document.getElementById("tContact").value.trim();
+            var email = document.getElementById("tEmail").value.trim();
+            
+            var nameRegex = /^[a-zA-Z\s]+$/; // Only letters and spaces
+            var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; // Standard email format
+            var contactRegex = /^[0-9]{10}$/; // Exactly 10 digits
+
+            // Check for empty fields
+            if (name === "" || gender === "choose" || contact === "" || email === "") {
+                alert("All fields are mandatory.");
+                return false;
+            }
+            // Name validation
+            if (name.length < 2) {
+                alert("Name must be at least 2 characters long.");
+                return false;
+            }
+            if (!nameRegex.test(name)) {
+                alert("Name should contain only alphabets (no numbers or special characters).");
+                return false;
+            }
+            // Mobile number validation
+            if (!contactRegex.test(contact)) {
+                alert("Mobile number must be exactly 10 digits and contain only numbers.");
+                return false;
+            }
+            // Email validation
+            if (!emailRegex.test(email)) {
+                alert("Invalid email format.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <button onclick="indexpage()" id="back">Back</button>
+    <div class="formbody">
+        <form onsubmit="return form_Validations()" method="post" action="teacher">
+            <h2>Register</h2>
+            
+            <label for="tName">Name:</label>
+            <input type="text" name="teacher_Name" id="tName" placeholder="Enter your name">
+
+            <label>Gender<sup>*</sup>:</label>
+            <select name="teacher_Gender" id="tGender">
+                <option value="choose">Choose</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select><br><br>
+
+            <label for="tContact">Mobile:</label>
+            <input type="text" name="teacher_Contact" id="tContact" placeholder="Enter your mobile number" maxlength="10">
+
+            <label for="tEmail">Email:</label>
+            <input type="email" name="teacher_Email" id="tEmail" placeholder="Example@gmail.com">
+
+            <button type="submit" id="submitBtn" disabled>Submit</button>
+        </form>
+    </div>
+</body>
+</html>

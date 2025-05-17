@@ -1,0 +1,361 @@
+
+            body{
+                height: 100vh;
+                width: 100%;
+                overflow: hidden;
+                font-family: 'Roboto', Arial, sans-serif;
+            }
+            /* side navigation bar css */
+            .navmain
+            {
+                height: 93vh;
+                width: 17%;
+                float: left;
+                padding: 20px;
+            }
+            .profile
+            {
+                height: 15vh;
+                width: 85%;
+                text-align: center;
+                padding: 20px;
+                border-radius: 10px;
+            }
+            .profile button
+            {
+                background-color: #6bbbed;
+                color: white;
+                height:25px;
+                width: 50%;
+                border: none;
+                border-radius: 20px;
+                transition: 0.4s;
+            }
+            .profile button:hover{
+                height: 28px;
+                width: 55%;
+            }
+            #logo
+            {
+                height: 2cm;
+                width: 2cm;
+                background: white;
+                padding: 5px;   
+                border-radius: 25px;
+                border: 1px solid #6bbbed;
+            }
+            hr
+            {
+                border: none;
+                height: 3px;
+                background-color: silver; /* Adjust to your color */
+                margin: 10px 0;
+            }
+            .navbaroption {
+                margin-top: 5%;
+                height: 70vh;
+                width: 85%;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .navbaroption a {
+                text-decoration: none;
+                position: relative;
+                color: #0d6efd;
+                padding: 5px 0;
+
+
+                text-decoration: none;
+                color: black;
+                font-size: 20px;
+                display: flex; /* Makes the link a flex container */
+                align-items: center; /* Centers the image and text vertically */
+                margin-top: 25%;
+                gap: 10px; /* Adds space between the image and text */
+                transition: color 0.3s ease; /* Smooth transition for hover color */
+            }
+            .navbaroption a::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 0;
+                height: 2px;
+                background: #007BFF;
+                transition: width 0.3s ease;
+            }
+
+            .navbaroption a:hover::after {
+                width: 100%;
+            }
+
+            .navbaroption a:hover {
+                color: #0d6efd; /* Hover color */
+            }
+
+            .navbaroption img {
+                height: 0.8cm;
+                width: 0.8cm;
+                display: block; /* Ensures the image behaves like a block element */
+            }
+
+            #Dashboard
+            {
+                color: #0d6efd;
+                /*                text-decoration: underline #0d6efd;
+                                text-underline-offset: 5px;*/
+            }
+            .top
+            {
+                display: flex;
+                align-items: center;
+            }
+            .top img
+            {
+                height: 2cm;
+                width: 2cm;
+                margin-left: 75%;
+                transition: 0.4s;
+            }
+            .top img:hover{
+                height: 1.2cm;
+                width: 1.2cm;
+            }
+            #quickadd
+            {
+                display: inline-block;
+                border: none;
+                color:orange;
+                height: 30px;
+                background: none;
+                font-size: 20px;
+            }
+
+            /* main interface ui css */
+
+            .mainbody
+            {
+                background-color: #f4f3ef;
+                height: 100vh;
+                width: 77%;
+                margin-left:20%;
+                padding: 20px;
+            }
+            h2{
+                color: #0d6efd;
+            }
+            .dashboard
+            {
+                height: 30vh;
+                display: flex;
+                justify-content: space-evenly;
+                padding: 20px;
+                background: white;
+                border-radius: 10px;
+            }
+
+            /* teacher student and total containers css */
+            .container_1
+            {
+                width: 25%;
+                border: 1px solid #0d6efd;
+                background-color: rgb(173, 216, 255);
+                border-radius: 10px;
+                text-align: center;
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                /* background-color: rgba(13, 110, 253, 0.2); */
+            }
+            .container_2
+            {
+                text-align: center;
+                border: 1px solid rgb(255, 213, 0);
+                background-color: rgb(255, 250, 200);
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                border-radius: 10px;
+                width: 25%;
+            }
+            .container_3
+            {
+                width: 25%;
+                text-align: center;
+                border: 1px solid pink;
+                background-color: rgb(216, 191, 216);
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                border-radius: 10px;
+            }
+
+            /* TOTAL CONTAINER CSS  */
+            .cont_3
+            {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 10vh;
+            }
+            p{
+                display: inline-block;
+                font-size: 40px;
+                margin-bottom: 60px;
+            }
+
+            /* STUDENT AND TEACHER CONTAINER CSS */
+            #student , #teacher
+            {
+                display: block;
+                margin-left: 33%;
+                height: 2cm;
+                width: 2cm;
+                padding: 8px;
+                border-radius: 25px;
+                margin-bottom: 10px;
+            }
+            #Present ,#notPresent
+            {
+                height: 1cm;
+                width: 1cm;
+                padding: 8px;
+                margin-left: 10%;
+                margin-right: 10%;
+                margin-bottom: 10px;
+            }
+            #notPresent
+            {
+                height: 1.01cm;
+                width: 1.01cm;
+            }
+            #totalTeacher , #totalStudent
+            {
+                height: 1cm;
+                width: 1cm;
+                margin:10px 30px 40px 40px;
+            }
+            label
+            {
+                font-weight: bold;
+                margin: 20px 38px 38px 35px;
+                font-size: 25px;
+            }
+
+            /* TABLE MAIN CSS OUTLINE */
+            .tblmain
+            {
+                padding: 20px;
+                background: white;
+                border-radius: 10px;
+
+            }
+            table th
+            {
+                height: 40px;
+                background: #6bbbed;
+            }
+
+            /* MAIN TABLE */
+            table
+            {
+                width: 100%;
+                text-align: center;
+                border-collapse: collapse;
+                border-radius:10px;
+                height: auto;
+            }
+            table  tr:nth-child(odd) {
+                background-color: #f4f3ef;
+            }
+            table tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+            table td
+            {
+                padding: 10px;
+            }
+            table img{
+                height: 1.5cm;
+                width: 1.5cm;
+                border-radius: 25px;
+            }
+            form button{
+                margin-top: 35%;
+                display: flex;
+                background: none;
+                border:none
+            }
+            form span{
+                margin-top: 4%;
+                font-size: 20px;
+                margin-left: 5px;
+            }
+            #logoutMessage {
+                display: none;
+                color: red;
+                font-size: 18px;
+                margin: 20px;
+            }
+
+            /* PROGRESS BAR DESIGN */
+
+            @keyframes progress {
+                0% {
+                    --percentage: 0;
+                }
+                100% {
+                    --percentage: var(--value);
+                }
+            }
+
+            @property --percentage {
+                syntax: '<number>';
+                inherits: true;
+                initial-value: 0;
+            }
+
+            [role="progressbar"] {
+                --percentage: var(--value);
+                --primary: #dd6e42;
+                --secondary: #ffff;
+                --size: 80px;
+                animation: progress 2s 0.5s forwards;
+                width: var(--size);
+                aspect-ratio: 1;
+                border-radius: 50%;
+                position: relative;
+                overflow: hidden;
+                display: grid;
+                place-items: center;
+                margin-left: 35%;
+            }
+
+            [role="progressbar"]::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: conic-gradient(var(--primary) calc(var(--percentage) * 1%), var(--secondary) 0);
+                mask: radial-gradient(white 55%, transparent 0);
+                mask-mode: alpha;
+                -webkit-mask: radial-gradient(#0000 55%, #000 0);
+                -webkit-mask-mode: alpha;
+            }
+
+            [role="progressbar"]::after {
+                counter-reset: percentage var(--value);
+                content: counter(percentage) '%';
+                font-family: Helvetica, Arial, sans-serif;
+                font-size: calc(var(--size) / 5);
+                color: var(--primary);
+            }
+
+
+
+            .proBar
+            {
+                height: 10vh;
+                margin-top:10%;
+
+            }
+

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <style>
+    :root {
+        color-scheme: light dark;
+    }
+
+    .body {
+        width: 100%;
+        height: 100vh;
+        font-family: sans-serif;
+        background-image: linear-gradient(to left, grey,#011f3f);
+    }
+
+   .navigation_Bar{
+        gap: 30px;
+        padding: 10px;
+        gap:1%;
+        margin-right: 10px;  
+        padding-left:  10px;
+        display: flex;
+        align-items: center;
+    }
+    .navigation_Bar h1{
+        margin-left: 40px;    
+    }
+   .items {
+        display: flex;
+        justify-content: end;
+      /*  gap: 100px; */
+        margin-left: 200px;
+       /* height: vh; */
+        text-align: center;
+        align-items: center;  
+        padding: 5px;
+        width: 60%;
+   }
+   .items a{
+    text-decoration: none;
+    color:#ffff;
+    margin-top: 20px;
+    color:  rgb(228, 139, 6);
+    font-size: 20px;
+    margin-right: 1px;
+    gap: 1px;
+   }
+   .imghref{
+    display: flex;
+    padding: 5px;
+    width: 90%;
+    gap: 5px;
+   }
+   .imghref img{
+        height: 0.8cm;
+        margin-right: 1px;
+        width: 0.8cm;
+        margin-top: 15px;
+        color:orange;
+   }
+   .imghref span{
+     margin-left:100px;
+   }
+   h1{
+    font-weight: 600;
+    color: #ffff;
+   }
+   .text{
+    margin-top: 100px;
+    width: 60%;
+    margin-left: 40px;
+    font-size: 25px;
+   }
+.typing {
+  font-size: 25px;
+  margin-left:40px ;
+  margin-top: -2%;
+  color:orange;
+  line-height: 1px; /* Ensures cursor height matches text */
+  white-space: nowrap; /* Prevents text from wrapping */
+  overflow: hidden; /* Ensures text is hidden initially */
+  border-right: 1px solid orange; /* Blinking cursor */
+  animation: typing 3s steps(30, end), blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0; /* Start with no text visible */
+  }
+  to {
+    width: 80%; /* Reveal the entire text */
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent; /* Makes the cursor disappear periodically */
+  }
+}
+   .text2{
+    margin-top: -20px;
+    width: 60%;
+    margin-left: 50px;
+    font-size: 25px;
+    color: orange;
+   }
+   .form{
+    width: 50%;
+    align-items: center;
+    text-align: center;
+    height: 30vh;
+    border-radius: 20px;
+    padding-top: 50px;
+    margin-left: 8%;
+    border: 2px solid orange;
+    margin-top: 5%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   }
+   input {
+    border-radius: 25px;
+    height: 20px;
+    width: 70%;
+    padding: 10px;
+    font-size: 14px;
+    border: 2px solid transparent;
+    outline: none;
+    background-color: #fff;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    color: black; 
+}   
+input:focus {
+    border-color: #ff5e5e;
+    box-shadow: 0 0 10px #ff5e5eb3, 0 0 10px rgba(2, 245, 255, 0.7);
+}
+   button {
+    border-radius: 25px;
+    border: none;
+    height: 40px;
+    width: 40%;
+    margin-top: 8%;
+    color: #fff;
+    font-size: 16px;
+    background: linear-gradient(90deg, rgb(228, 139, 6) 0%, hsla(52, 100%, 50%, 0.976) 100%);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    box-shadow: 0 0 20px rgba(255, 116, 2, 0.918), 0 0 40px rgba(255, 116, 2, 0.918);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgb(255, 226, 94), 0 0 50px rgb(251, 255, 2);
+    color: black;
+    font-weight: bold;
+}
+
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0 0 15px #fff75ec1, 0 0 25px #ffff02;
+}
+
+button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   /* background: radial-gradient(circle, rgba(118, 94, 255, 0.967) 10%, rgba(255, 2, 2, 0.529) 80%);*/
+    z-index: -1;
+    color: black;
+    filter: blur(8px);
+    transition: opacity 0.3s;
+    opacity: 0;
+}
+
+button:hover::after {
+    opacity: 1;
+}
+hr{
+   width: 95%;
+   margin-top: -10px;
+}
+#home{
+    height: 0.6cm;
+    width: 0.6cm;
+    margin-top:18px;
+    margin-right: 5px;
+}
+#hod{
+  margin-top: 12px;
+}
+.adimg
+{
+  height: 10px;
+  margin-left: 55%;
+  height: 80vh;
+  padding: 10px;
+  margin-right: 10px;
+
+}
+.mainbody
+{
+  float: left;
+  height: 80vh;
+  
+}
+.imgformain 
+{
+  padding: 10px;
+  margin-top: 70px;
+  margin-top:115px;
+}
+.imgformain img{
+  height: 50vh;
+  margin-top: 100px;
+  margin-left: 140px;
+  border-radius: 20px;
+  border: 5px solid orange; 
+  box-shadow: rgb(red) 0px 20px 30px -10px;
+}
+</style>
+    
+    
+</head>
+<body>
+    <div class="body">
+        <div class="navigation_Bar">
+            <h1>Smart Attendance</h1>
+          <div class="items">
+               <div class="imghref">
+                    <img src="images/home (1).png" id="home">
+                    <a href="#">Home</a>
+                    <span></span>
+                    <img src="./images/teacher.png">
+                    <a href="teacher_Login.jsp">Teacher</a>
+                    <span></span>
+                    <img src="images/study.png">
+                    <a href="student_Login.jsp">Student</a>
+                    <span></span>
+                    <img src="images/chief-sitting-behind-a-desktop.png" id="hod">
+                    <a href="hod_Login.jsp">Hod</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="mainbody">
+            <div class="text">
+                <h1>Welcome to Smart Attendance</h1>
+            </div>
+            <div class="typing">
+                <h5>A smarter way to track and manage student attendance online.</h5>
+            </div>
+            <div class="form">
+                <form action="AdminLogin" method="post" >
+                  <input type="text" placeholder="Admin ID" name="adminId" required><br><br>
+                  <input type="password" placeholder="Password" name="adminPassword" required><br><br>
+                  <button type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+          <div class="adimg">
+              <div class="imgformain">
+                <img src="images/mainimg.png" alt="">
+              </div>
+           </div>
+    </div>
+</body>
+</html>
